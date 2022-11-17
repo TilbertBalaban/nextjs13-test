@@ -2,7 +2,11 @@ import Link from 'next/link';
 import { Todo } from '../../../types';
 
 const fetchTodos = async (): Promise<Todo[]> => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/todos/');
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos/', {
+    next: {
+      revalidate: 10,
+    },
+  });
   const data: Todo[] = await response.json();
   return data;
 };
