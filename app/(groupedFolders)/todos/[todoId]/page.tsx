@@ -1,7 +1,5 @@
-import { FC } from 'react';
-import { Todo } from '../../../types';
-
 import { notFound } from 'next/navigation';
+import { Todo } from '../../../../types';
 
 const fetchTodo = async ({ todoId }: { todoId: string }): Promise<Todo> => {
   const response = await fetch(

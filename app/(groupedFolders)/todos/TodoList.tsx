@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Todo } from '../../types';
+import { Todo } from '../../../types';
 
 const fetchTodos = async (): Promise<Todo[]> => {
   const response = await fetch('https://jsonplaceholder.typicode.com/todos/');
